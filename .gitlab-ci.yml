@@ -1,0 +1,7 @@
+before_script:
+  - apt-get update -y
+  - http_proxy=http://192.168.4.10:3142 apt-get -y install golang ca-certificates
+
+test:
+  script:
+    - go test -v ./...
